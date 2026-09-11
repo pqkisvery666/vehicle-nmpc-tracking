@@ -51,7 +51,7 @@ python benchmark_solvers.py   # 求解器基准对比
 
 *稳态巡航：约束组与宽松对照的轨迹（两者都贴线，差别在控制量是否物理可行）*
 
-![起步瞬态时序](vehicle-nmpc-tracking/results/startup_timeseries.png)
+![起步瞬态时序](results/startup_timeseries.png)
 
 *起步瞬态：约束组的加速度恰好贴在 3 m/s² 限幅上，宽松对照冲到 10 m/s²（不可执行）*
 
