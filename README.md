@@ -43,11 +43,11 @@ python benchmark_solvers.py   # 求解器基准对比
 
 ## 结果预览
 
-![约束组稳态巡航动画](vehicle-nmpc-tracking/results/animation.gif)
+![约束组稳态巡航动画](results/animation.gif)
 
 *约束组跑完整 1 圈（目标 6 m/s，虚线为走廊边界）*
 
-![稳态巡航轨迹](vehicle-nmpc-tracking/results/steady_track.png)
+![稳态巡航轨迹](results/steady_track.png)
 
 *稳态巡航：约束组与宽松对照的轨迹（两者都贴线，差别在控制量是否物理可行）*
 
