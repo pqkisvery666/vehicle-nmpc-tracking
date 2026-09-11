@@ -1,0 +1,5 @@
+# 项目依赖（Python 3.11+）
+# 说明：仿真与控制器只需要下面三个包；scipy 未被使用（v2 已移除）。
+numpy>=1.26
+matplotlib>=3.8
+casadi>=3.6

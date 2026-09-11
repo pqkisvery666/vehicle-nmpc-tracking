@@ -1,0 +1,87 @@
+{
+  "dt": 0.1,
+  "v_ref": 6.0,
+  "horizon": 25,
+  "lane_half_width": 3.0,
+  "delta_rate_max": 0.6,
+  "weights": {
+    "lat": 40.0,
+    "lon": 2.0,
+    "psi": 18.0,
+    "v": 8.0,
+    "a": 0.6,
+    "delta": 20.0
+  },
+  "bounds": {
+    "a": [
+      -3.0,
+      3.0
+    ],
+    "delta": [
+      -0.5,
+      0.5
+    ],
+    "v": [
+      0.05,
+      8.0
+    ]
+  },
+  "relaxed_bounds": {
+    "a": [
+      -10.0,
+      10.0
+    ],
+    "delta": [
+      -1.4,
+      1.4
+    ],
+    "v": [
+      0.05,
+      15.0
+    ]
+  },
+  "wheelbase_model": 2.5,
+  "quick": false,
+  "scenarios": {
+    "steady": {
+      "title": "稳态巡航",
+      "desc": "从目标速度起步：考察弯道跟踪质量与约束遵守",
+      "v0": 6.0,
+      "lateral_offset": 0.0,
+      "wheelbase_real": 2.5,
+      "corridor": 3.0,
+      "soft": false,
+      "relaxed_corridor": null
+    },
+    "startup": {
+      "title": "起步瞬态",
+      "desc": "3 m/s 起步加速到巡航：考察阶跃响应与控制量合理性",
+      "v0": 3.0,
+      "lateral_offset": 0.0,
+      "wheelbase_real": 2.5,
+      "corridor": 3.0,
+      "soft": false,
+      "relaxed_corridor": null
+    },
+    "recovery": {
+      "title": "偏移恢复",
+      "desc": "初始横向偏离 2.5 m（走廊外）：考察软约束与恢复能力",
+      "v0": 6.0,
+      "lateral_offset": 2.5,
+      "wheelbase_real": 2.5,
+      "corridor": 1.5,
+      "soft": true,
+      "relaxed_corridor": null
+    },
+    "mismatch": {
+      "title": "模型失配",
+      "desc": "真实轴距 3.0 m、控制器按 2.5 m 预测：考察滚动反馈的鲁棒性",
+      "v0": 6.0,
+      "lateral_offset": 0.0,
+      "wheelbase_real": 3.0,
+      "corridor": 1.5,
+      "soft": false,
+      "relaxed_corridor": null
+    }
+  }
+}
